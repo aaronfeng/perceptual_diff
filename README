@@ -1,0 +1,21 @@
+This is a ruby wrapper for the perceptual image diff utility (http://pdiff.sourceforge.net/).
+I accidentally stumbled upon this interesting library a year ago, so I decided to write 
+a ruby wrapper for it.  The program will take in two images and compared them using the 
+perceptual image diff utility.  The output is also another image, and it will highlight the 
+differences between the input images.
+
+I actually wrote this over a year ago.  As far as I know, the program should run, but I haven't
+check it recently.
+
+
+Below is the reasoning for perceptual diff utility copied from http://pdiff.sourceforge.net/
+
+Why? I can look at the images myself
+
+So why would I use a program to tell me if two images are similar if I can tell the difference myself by eyeballing it?
+Well the utility of this program really shines in the context of QA of rendering algorithms.
+During regression testing of a renderer, hundreds of images are generated from an older version of the renderer and are compared
+with a newer version of the renderer. This program drastically reduces the number of false positives (failures that are not actually failures)
+caused by differences in random number generation, OS or machine architecture differences. Also, you do not
+want a human looking at hundreds of images when you can get the computer to do it for you nightly on a cron job.
+
